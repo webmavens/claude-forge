@@ -17,11 +17,10 @@ You:  /forge deploy my-app
 
 ## Demo
 
-<!-- Drop a terminal recording here. e.g. an asciinema cast or a GIF:
-     ![demo](docs/demo.gif)
-     Record with:  asciinema rec  (then upload, or convert to GIF with agg) -->
+![claude-forge demo](docs/demo.gif)
 
-> _Demo recording coming soon. Want to contribute one? See [CONTRIBUTING](./CONTRIBUTING.md)._
+> Recorded against a local mock — **all data shown is fictional**. Reproduce it yourself with
+> the harness in [`demo/`](./demo).
 
 > **Heads up:** this tool acts on **your real Forge infrastructure**. Every mutating action
 > (deploy, reboot, create, env changes…) is gated behind an explicit confirmation, but you are
