@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  smoke:
+    name: Lint & smoke test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Byte-compile (syntax check)
+        run: python -m compileall -q forge/skills/forge/forge.py
+
+      - name: CLI loads and shows help
+        run: python forge/skills/forge/forge.py --help
+
+      - name: Mutating actions are gated without --yes (expect exit 2)
+        run: |
+          set +e
+          python forge/skills/forge/forge.py servers reboot 123
+          code=$?
+          set -e
+          test "$code" -eq 2 || { echo "expected exit 2, got $code"; exit 1; }
+
+      - name: Validate plugin manifests are valid JSON
+        run: |
+          python -c "import json; json.load(open('.claude-plugin/marketplace.json'))"
+          python -c "import json; json.load(open('forge/.claude-plugin/plugin.json'))"

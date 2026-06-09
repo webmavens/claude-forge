@@ -1,5 +1,10 @@
 # claude-forge
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-7c3aed.svg)](https://docs.anthropic.com/en/docs/claude-code)
+[![Python](https://img.shields.io/badge/python-3.8%2B-3776ab.svg)](https://www.python.org/)
+[![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)](#how-it-works)
+
 Drive [Laravel Forge](https://forge.laravel.com) from **Claude Code** — manage servers, sites,
 deployments, databases, SSL, daemons, scheduled jobs, and env files in plain English. You bring
 your own Forge API token; everything runs locally against the official Forge API.
@@ -9,6 +14,14 @@ You:  /forge deploy my-app
        ↳ Claude resolves the server + site, shows a dry-run, you confirm, it deploys,
          then tails the deploy log.
 ```
+
+## Demo
+
+<!-- Drop a terminal recording here. e.g. an asciinema cast or a GIF:
+     ![demo](docs/demo.gif)
+     Record with:  asciinema rec  (then upload, or convert to GIF with agg) -->
+
+> _Demo recording coming soon. Want to contribute one? See [CONTRIBUTING](./CONTRIBUTING.md)._
 
 > **Heads up:** this tool acts on **your real Forge infrastructure**. Every mutating action
 > (deploy, reboot, create, env changes…) is gated behind an explicit confirmation, but you are
@@ -125,4 +138,4 @@ in `forge.py`; keep guidance in `SKILL.md`.
 
 ## License
 
-[MIT](./LICENSE) © 2026 Sawan
+[MIT](./LICENSE) © 2026 Webmavens

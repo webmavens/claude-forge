@@ -1,0 +1,42 @@
+name: Bug report
+description: Something in the forge skill or CLI isn't working
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report! **Never paste your Forge API token or any `credentials` file
+        contents here.** Redact server IPs/domains if you'd rather keep them private.
+  - type: input
+    id: command
+    attributes:
+      label: Command / request
+      description: What did you run or ask Claude to do?
+      placeholder: e.g. `forge.py deploy run 12345 67890` — or "/forge deploy my-site"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs. actual
+      description: What did you expect, and what happened instead? Paste the error output (redacted).
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How did you install it?
+      options:
+        - Claude Code plugin
+        - curl install script
+        - manual / cloned repo
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS and `python3 --version`
+      placeholder: e.g. macOS 15.3, Python 3.12.4
+    validations:
+      required: true

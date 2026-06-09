@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/webmavens/claude-forge/security/policy
+    about: Please report token-exposure or other security issues privately — not as a public issue.
+  - name: Laravel Forge API docs
+    url: https://forge.laravel.com/api-documentation
+    about: Endpoint reference for adding or debugging commands.

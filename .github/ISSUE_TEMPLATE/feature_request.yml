@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest a new command or improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you want to do?
+      description: Describe the Forge operation or workflow you wish the skill supported.
+      placeholder: e.g. "manage site redirects" or "list deployment history as a command"
+    validations:
+      required: true
+  - type: input
+    id: endpoint
+    attributes:
+      label: Relevant Forge API endpoint (if known)
+      description: See https://forge.laravel.com/api-documentation
+      placeholder: e.g. GET /servers/{server}/sites/{site}/redirects
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: Mention if it's a mutating action (would need the `--yes` gate), edge cases, etc.
