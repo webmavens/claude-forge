@@ -1,0 +1,12 @@
+{
+  "name": "forge",
+  "description": "Operate your Laravel Forge account (forge.laravel.com) through its API: servers, sites, deployments, databases, SSL, daemons, scheduled jobs, and env files. Authenticate once with your own Forge API token.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sawan",
+    "url": "https://github.com/webmavens"
+  },
+  "homepage": "https://github.com/webmavens/claude-forge",
+  "license": "MIT",
+  "keywords": ["laravel", "forge", "deployment", "devops", "servers", "sites"]
+}

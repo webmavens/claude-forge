@@ -1,0 +1,20 @@
+{
+  "name": "claude-forge",
+  "owner": {
+    "name": "Sawan",
+    "url": "https://github.com/webmavens"
+  },
+  "metadata": {
+    "description": "Drive Laravel Forge from Claude Code — servers, sites, deploys, databases, SSL, daemons, jobs, env.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "forge",
+      "source": "./forge",
+      "description": "Operate your Laravel Forge account (forge.laravel.com) through its API: servers, sites, deployments, databases, SSL, daemons, scheduled jobs, and env files.",
+      "version": "1.0.0",
+      "keywords": ["laravel", "forge", "deployment", "devops", "servers"]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Never ship credentials or local cruft
+credentials
+*.credentials
+.env
+__pycache__/
+*.pyc
+.DS_Store
