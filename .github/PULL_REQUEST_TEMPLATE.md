@@ -17,7 +17,7 @@
 - [ ] Mutating actions go through `confirm_gate()` (require `--yes`)
 - [ ] New subparser has `parents=[common]` (so `--json`/`--yes` work anywhere)
 - [ ] `SKILL.md` updated if commands changed
-- [ ] `CHANGELOG.md` updated; version bumped in both manifest files if needed
+- [ ] Commits follow [Conventional Commits](https://www.conventionalcommits.org/) (`feat:`/`fix:`/…) — versioning & changelog are automated by release-please
 - [ ] No secrets/tokens committed
 
 ## How did you test it?

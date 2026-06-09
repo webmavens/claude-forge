@@ -44,11 +44,27 @@ python3 forge/skills/forge/forge.py servers list
 4. Bump the version in `CHANGELOG.md`, `.claude-plugin/marketplace.json`, and
    `forge/.claude-plugin/plugin.json`.
 
+## Commit messages & releases
+
+This repo uses [Conventional Commits](https://www.conventionalcommits.org/) and
+[release-please](https://github.com/googleapis/release-please) for automated versioning.
+Your commit prefixes drive the next version bump:
+
+- `feat: …` → minor bump (new command/capability)
+- `fix: …` → patch bump
+- `feat!: …` or a `BREAKING CHANGE:` footer → major bump
+- `docs:`, `chore:`, `ci:`, `refactor:` → no release on their own
+
+On merge to `main`, release-please opens/updates a "release PR" that bumps the version in
+`CHANGELOG.md`, `.claude-plugin/marketplace.json`, and `forge/.claude-plugin/plugin.json`.
+Merging that PR tags the version and publishes a GitHub release. **You don't bump versions by
+hand** — just write good commit messages.
+
 ## Pull requests
 
 - One focused change per PR.
 - Note what you tested it against (which Forge resources, read vs. mutating).
-- If it changes behavior, update `SKILL.md` and `CHANGELOG.md` in the same PR.
+- If it changes behavior, update `SKILL.md` in the same PR (the changelog is automated).
 
 ## Reporting bugs / security
 
