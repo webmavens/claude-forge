@@ -4,6 +4,13 @@ All notable changes to this project are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/), and this project
 adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.0](https://github.com/webmavens/claude-forge/compare/v1.0.0...v1.1.0) (2026-06-09)
+
+
+### Features
+
+* add FORGE_API_BASE override and offline demo harness ([856eb42](https://github.com/webmavens/claude-forge/commit/856eb42952aa1647cbdff5af6d157640ac8b92bd))
+
 ## [1.0.0] — 2026-06-09
 
 Initial public release.
