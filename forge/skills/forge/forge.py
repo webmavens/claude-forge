@@ -17,7 +17,8 @@ import time
 import urllib.error
 import urllib.request
 
-API_BASE = "https://forge.laravel.com/api/v1"
+# Override with FORGE_API_BASE for testing against a mock / self-hosted endpoint.
+API_BASE = os.environ.get("FORGE_API_BASE", "https://forge.laravel.com/api/v1").rstrip("/")
 CRED_PATH = os.path.expanduser("~/.claude/forge/credentials")
 MAX_RETRIES = 5  # for 429 / transient errors
 
